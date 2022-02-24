@@ -24,7 +24,7 @@ class TextCurrenctUI extends StatelessWidget{
         text: TextSpan(
           children: [
             TextSpan(text: text,
-              style: TextStyle(fontSize: 26, color: Colors.green,),),
+              style: TextStyle(fontSize: 26, color: Colors.green,fontWeight: FontWeight.bold),),
           ],
         ),
       ),

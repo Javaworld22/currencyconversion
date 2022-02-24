@@ -4,8 +4,8 @@ class API{
 
   static String BASE_URL = 'data.fixer.io';
   static String LATEST = '/api/latest';
-  static String HISTORY = '/api/latest';
-  static String ACCESS_KEY = '11790e57851c4894b4163095bd122d8f';
+  static String HISTORY = '/api/';
+  static String ACCESS_KEY =  '7fb30657ccd92a95037df59e1cbefeaa';
   static String EUR = 'EUR';
   static String USD = 'USD';
   static String AUD = 'AUD';

@@ -9,40 +9,50 @@ class LineTitles {
     show: true,
     bottomTitles: SideTitles(
       showTitles: true,
-      reservedSize: 35,
+      reservedSize: 25,
       getTextStyles: (value) => const TextStyle(
-        color: Color(0xff68737d),
+        color: Colors.white70,
         fontWeight: FontWeight.bold,
-        fontSize: 16,
+        fontSize: 12,
       ),
       getTitles: (value) {
         switch (value.toInt()) {
           case 2:
-            return 'MAR';
+            return '2 Jan';
           case 5:
-            return 'JUN';
+            return '5 Jan';
           case 8:
-            return 'SEP';
+            return '8 Jan';
+          case 11:
+            return '11 Jan';
+          case 14:
+            return '14 Jan';
+          case 17:
+            return '17 Jan';
+          case 20:
+            return '20 Jan';
+          case 23:
+            return '23 Jan';
         }
         return '';
       },
-      margin: 8,
+      margin: 15,
     ),
     leftTitles: SideTitles(
       showTitles: true,
       getTextStyles: (value) => const TextStyle(
-        color: Color(0xff67727d),
+        color: Colors.white38,
         fontWeight: FontWeight.bold,
         fontSize: 15,
       ),
       getTitles: (value) {
         switch (value.toInt()) {
           case 1:
-            return '10k';
+            return '1.09';
           case 3:
-            return '30k';
+            return '3.09';
           case 5:
-            return '50k';
+            return '5.08';
         }
         return '';
       },
