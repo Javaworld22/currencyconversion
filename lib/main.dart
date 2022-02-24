@@ -1,7 +1,10 @@
+import 'package:currencyconversion/statemodel/currencyscope.dart';
 import 'package:currencyconversion/ui/currency_ui.dart';
+import 'package:currencyconversion/ui/graphui.dart';
 import 'package:currencyconversion/ui/rateui.dart';
 import 'package:currencyconversion/ui/textcurrencyui.dart';
 import 'package:flutter/material.dart';
+import 'package:scoped_model/scoped_model.dart';
 
 void main() {
   runApp(MyApp());
@@ -65,6 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    CurrencyScope scopeModel = CurrencyScope();
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -100,6 +104,11 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
+        child: ScopedModel<CurrencyScope>(
+          model: scopeModel,
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          physics: ClampingScrollPhysics(),
         child: Column(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
@@ -128,7 +137,10 @@ class _MyHomePageState extends State<MyHomePage> {
             TextCurrenctUI('Calculator'),
             CurrencyUI(),
             CurrencyratingsUI(),
+            Graph(),
           ],
+        ),
+        ),
         ),
       ),
       // floatingActionButton: FloatingActionButton(
